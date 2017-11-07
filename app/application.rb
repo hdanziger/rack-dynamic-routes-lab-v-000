@@ -8,8 +8,8 @@ class Application
 
     if req.path.match(/item/)
 
-      item_price = req.path.split("/item/").last
-      if item = @@item.find{|i| i.price == item_price}
+      item_name = req.path.split("/item/").last
+      if item = @@item.find{|i| i.price == item_name}
         resp. write item.price
     else
       resp.write "Route not found"
